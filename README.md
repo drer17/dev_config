@@ -34,6 +34,10 @@ tmux source ~/.config/tmux/tmux.conf
 
 Put dir in ...
 
+## Font
+
+[CaskaydiaMono](https://www.nerdfonts.com/font-downloads)
+
 ```
 ~/.config/nvim/
 ```
