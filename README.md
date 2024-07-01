@@ -12,7 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 Put config file here...
 
 ```
-~/.config/tmux/tmux.conf
+~/.tmux.conf
 ```
 
 ### TPM
@@ -26,7 +26,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Install packages
 
 ```
-tmux source ~/.config/tmux/tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
 ```
 
