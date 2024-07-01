@@ -27,7 +27,7 @@ Install packages
 
 ```
 tmux source ~/.config/tmux/tmux.conf
-~/.tmux/plugins/tpm/bin/install_plugins\
+~/.tmux/plugins/tpm/bin/install_plugins
 ```
 
 ## NvChad
