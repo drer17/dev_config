@@ -80,4 +80,7 @@ return {
       -- require("core.utils").load_mappings "dap_python"
     end,
   },
+  {
+    "kdheepak/lazygit.nvim",
+  },
 }
