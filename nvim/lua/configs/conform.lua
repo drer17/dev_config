@@ -5,6 +5,11 @@ local options = {
     javascript = { "prettier" },
     css = { "prettier" },
     html = { "prettier" },
+    json = { "prettier" },
+    yaml = { "prettier" },
+    markdown = { "prettier" },
+    typescriptreact = { "prettier" },
+    typescript = { "prettier" },
   },
   format_on_save = {
     -- These options will be passed to conform.format()
