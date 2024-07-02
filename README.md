@@ -40,3 +40,13 @@ Put dir in ...
 ```
 ~/.config/nvim/
 ```
+
+## Lazy Git
+
+To exit on esc, find file location of config as per [here](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
+
+and save,
+
+```
+quitOnTopLevelReturn: true
+```
