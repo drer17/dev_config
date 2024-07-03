@@ -39,7 +39,6 @@ map("n", "<leader>rn", function()
   end
 end)
 
-
 map("x", "<leader>re", function()
   require("refactoring").refactor "Extract Function"
 end)
