@@ -12,6 +12,11 @@ map("n", "<leader><F5>", function()
   require "dap-python"
   vim.cmd "DapNew"
 end)
+map("n", "<leader><F10>", "<cmd> DapStepOver <CR>")
+map("n", "<leader><F11>", "<cmd> DapStepInto <CR>")
+map("n", "<leader>dc", "<cmd> DapContinue <CR>")
+map("n", "<leader>dr", "<cmd> DapRestart <CR>")
+map("n", "<leader>dq", "<cmd> DapTerminate <CR>")
 
 map("n", "<leader>g", function()
   require "lazygit"
