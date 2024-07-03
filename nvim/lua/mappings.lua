@@ -29,7 +29,16 @@ map("n", "<leader>g", function()
   vim.cmd "LazyGit"
 end)
 
-map("n", "<leader>rn", "<cmd> IncRename <CR>")
+map("n", "<leader>rn", function()
+  local arg = vim.fn.input "Enter argument: "
+  if arg ~= "" then
+    require "inc_rename"
+    vim.cmd("IncRename " .. arg)
+  else
+    print "No argument provided."
+  end
+end)
+
 
 map("x", "<leader>re", function()
   require("refactoring").refactor "Extract Function"
