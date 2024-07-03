@@ -77,7 +77,40 @@ return {
     config = function(_, opts)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
-      -- require("core.utils").load_mappings "dap_python"
+      
+      local dap = require "dap"
+
+      table.insert(dap.configurations.python, {
+        name = "Python: Current File",
+        type = "python",
+        request = "launch",
+        program = "${file}",
+        console = "integratedTerminal",
+        cwd = "${workspaceFolder}",
+        envFile = "${workspaceFolder}/.env",
+      })
+
+      table.insert(dap.configurations.python, {
+        name = "Pytest: Current File",
+        type = "python",
+        request = "launch",
+        module = "pytest",
+        args = { "${file}" },
+        console = "integratedTerminal",
+        cwd = "${workspaceFolder}",
+        envFile = "${workspaceFolder}/.env",
+      })
+
+      table.insert(dap.configurations.python, {
+        name = "Pytest: Current File With Output",
+        type = "python",
+        request = "launch",
+        module = "pytest",
+        args = { "${file}", "-s", "-W ignore::DeprecationWarning" },
+        console = "integratedTerminal",
+        cwd = "${workspaceFolder}",
+        envFile = "${workspaceFolder}/.env",
+      })
     end,
   },
   {
