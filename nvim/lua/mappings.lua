@@ -17,7 +17,7 @@ map("n", "<leader><F11>", "<cmd> DapStepInto <CR>")
 map("n", "<leader>dc", "<cmd> DapContinue <CR>")
 map("n", "<leader>dr", "<cmd> DapRestart <CR>")
 map("n", "<leader>dq", "<cmd> DapTerminate <CR>")
-map("n", "<leader>df", function()
+map("n", "<leader>dw", function()
   require("dapui").open { reset = true }
 end)
 
