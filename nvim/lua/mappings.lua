@@ -7,7 +7,7 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
-map("n", "<leader>ww", "<C-w>| <C-w>_")
+map("n", "<leader>wf", "<C-w>| <C-w>_")
 
 map("n", "<leader><F9>", "<cmd> DapToggleBreakpoint <CR>")
 map("n", "<leader><F5>", function()
