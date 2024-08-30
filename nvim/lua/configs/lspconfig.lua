@@ -28,3 +28,10 @@ lspconfig.pyright.setup {
   capabilities = capabilities,
   filetypes = {"python"},
 }
+
+-- rust
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "rust" },
+}
