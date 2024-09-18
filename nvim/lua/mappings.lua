@@ -9,13 +9,13 @@ map("i", "jk", "<ESC>")
 
 map("n", "<leader>wf", "<C-w>| <C-w>_")
 
-map("n", "<leader><F9>", "<cmd> DapToggleBreakpoint <CR>")
+map("n", "<leader><F8>", "<cmd> DapToggleBreakpoint <CR>")
 map("n", "<leader><F5>", function()
   require "dap-python"
   vim.cmd "DapNew"
 end)
 map("n", "<leader><F10>", "<cmd> DapStepOver <CR>")
-map("n", "<leader><F11>", "<cmd> DapStepInto <CR>")
+map("n", "<leader><F9>", "<cmd> DapStepInto <CR>")
 map("n", "<leader>dc", "<cmd> DapContinue <CR>")
 map("n", "<leader>dr", "<cmd> DapRestart <CR>")
 map("n", "<leader>dq", "<cmd> DapTerminate <CR>")
