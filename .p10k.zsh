@@ -32,7 +32,7 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     user
-    os_icon               # os identifier
+    host
     dir                     # current directory
     # =========================[ Line #2 ]=========================
     newline                 # \n
@@ -938,6 +938,8 @@
   typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND='#b6b6b6'
   typeset -g POWERLEVEL9K_USER_FOREGROUND='#b6b6b6'
   typeset -g POWERLEVEL9K_USER_BACKGROUND='#4e4e4e'
+  typeset -g POWERLEVEL9K_HOST_FOREGROUND='#b6b6b6'
+  typeset -g POWERLEVEL9K_HOST_BACKGROUND='#393939'
 
   # Context format when running with privileges: bold user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%B%n@%m'
