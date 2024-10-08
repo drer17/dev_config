@@ -32,7 +32,8 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     user
-    host
+    os_icon
+    # host
     dir                     # current directory
     # =========================[ Line #2 ]=========================
     newline                 # \n
@@ -196,6 +197,7 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#c6c6c6'
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND='#393939'
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -364,7 +366,8 @@
   # Untracked files icon. It's really a question mark, your font isn't broken.
   # Change the value of this parameter to show a different icon.
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
-  typeset -g POWERLEVEL9K_VCS_BACKGROUND='#d00054'
+  # typeset -g POWERLEVEL9K_VCS_BACKGROUND='#d00054'
+  typeset -g POWERLEVEL9K_VCS_BACKGROUND='#61a3d8'
 
   # Formatter for Git status.
   #
@@ -386,11 +389,11 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%246F'  # grey foreground
-      local      clean='%254F'   # green foreground
+      local       meta='%232F'  # grey foreground
+      local      clean='%232F'   # green foreground
       local   modified='%232F'  # yellow foreground
-      local  untracked='%33F'   # blue foreground
-      local conflicted='%88F'  # red foreground
+      local  untracked='%232F'   # blue foreground
+      local conflicted='%232F'  # red foreground
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
@@ -850,8 +853,8 @@
 
   ################[ todo: todo items (https://github.com/todotxt/todo.txt-cli) ]################
   # Todo color.
-  typeset -g POWERLEVEL9K_TODO_FOREGROUND=254
-  typeset -g POWERLEVEL9K_TODO_BACKGROUND=130
+  typeset -g POWERLEVEL9K_TODO_FOREGROUND=232
+  typeset -g POWERLEVEL9K_TODO_BACKGROUND='#b776c6'
   # Hide todo when the total number of tasks is zero.
   typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_TOTAL=false
   # Hide todo when the number of tasks after filtering is zero.
