@@ -7,6 +7,18 @@ cli dev configs
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+### POWERLEVEL10K
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+
+### TODO CLI
+
+[todo cli](https://github.com/todotxt/todo.txt-cli)
+
 ## TMUX
 
 Put config file here...
