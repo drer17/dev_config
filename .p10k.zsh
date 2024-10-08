@@ -858,7 +858,7 @@
   # Hide todo when the total number of tasks is zero.
   typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_TOTAL=false
   # Hide todo when the number of tasks after filtering is zero.
-  typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_FILTERED=false
+  typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_FILTERED=true
 
   # Todo format. The following parameters are available within the expansion.
   #
