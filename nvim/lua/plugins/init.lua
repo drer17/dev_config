@@ -80,7 +80,7 @@ return {
 
       dap.configurations.rust = {
         {
-          name = "hello-world",
+          name = "main",
           type = "codelldb",
           request = "launch",
           program = function()
