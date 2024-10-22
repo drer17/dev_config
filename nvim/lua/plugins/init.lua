@@ -28,7 +28,6 @@ return {
         "black",
         "python-lsp-server",
         "typescript-language-server",
-        "rust-analyzer",
         "tailwindcss-language-server",
         "codelldb",
         "eslint-lsp",
@@ -69,6 +68,40 @@ return {
     end,
   },
   {
+    "mrcjkb/rustaceanvim",
+    version = "^5",
+    lazy = false,
+  },
+  {
+    "mfussenegger/nvim-dap",
+    config = function(_, opts)
+      -- require("core.utils").load_mappings "dap"
+      local dap = require "dap"
+
+      dap.configurations.rust = {
+        {
+          name = "hello-world",
+          type = "codelldb",
+          request = "launch",
+          program = function()
+            local cwd = vim.fn.getcwd()
+            local project_name = vim.fn.fnamemodify(cwd, ":t")
+            return vim.fn.input(
+              "Path to executable: ",
+              vim.fn.getcwd() .. "/target/debug/" .. project_name
+              -- return cwd .. "/target/debug/" .. project_name
+            )
+          end,
+          cwd = "${workspaceFolder}",
+          stopOnEntry = false,
+          args = {},
+          console = "integratedTerminal",
+          runInTerminal = false,
+        },
+      }
+    end,
+  },
+  {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
     config = function()
@@ -84,12 +117,6 @@ return {
       dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
       end
-    end,
-  },
-  {
-    "mfussenegger/nvim-dap",
-    config = function(_, opts)
-      -- require("core.utils").load_mappings "dap"
     end,
   },
   {
