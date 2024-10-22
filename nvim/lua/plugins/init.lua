@@ -89,8 +89,8 @@ return {
             return vim.fn.input(
               "Path to executable: ",
               vim.fn.getcwd() .. "/target/debug/" .. project_name
-              -- return cwd .. "/target/debug/" .. project_name
             )
+            -- return cwd .. "/target/debug/" .. project_name
           end,
           cwd = "${workspaceFolder}",
           stopOnEntry = false,
