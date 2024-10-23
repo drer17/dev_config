@@ -103,6 +103,7 @@ return {
   },
   {
     "rcarriga/nvim-dap-ui",
+    lazy = false,
     dependencies = "mfussenegger/nvim-dap",
     config = function()
       local dap = require "dap"
