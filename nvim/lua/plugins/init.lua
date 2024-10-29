@@ -78,6 +78,12 @@ return {
       -- require("core.utils").load_mappings "dap"
       local dap = require "dap"
 
+      -- dap.adapters.codelldb = {
+      --   type = "executable",
+      --   command = "/Users/andrerepanich/.local/share/nvim/mason/packages/codelldb/codelldb",
+      --   name = "codelldb",
+      -- }
+
       dap.configurations.rust = {
         {
           name = "main",
